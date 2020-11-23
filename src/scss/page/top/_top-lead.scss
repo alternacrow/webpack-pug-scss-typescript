@@ -1,0 +1,18 @@
+.pa-top-lead {
+  margin-top: 40px;
+
+  & &__title {
+  }
+
+  & &__lib-list {
+    margin-top: 12px;
+    list-style-type: disc;
+  }
+
+  & &__lib-item {
+    margin-left: 24px;
+  }
+  & &__lib-item + &__lib-item {
+    margin-top: 8px;
+  }
+}

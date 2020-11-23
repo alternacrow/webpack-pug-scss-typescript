@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+// media query
+$breakpoints: (
+  'pc': 'screen and (min-width: 897px)',
+  'tab': 'screen and (min-width: 481px) and (max-width: 896px)',
+  'sp': 'screen and (max-width: 480px)',
+) !default;
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@function vw($pixel, $basewidth: 375) {
+  @return $pixel / $basewidth * 100vw;
+}

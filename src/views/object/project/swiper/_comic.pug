@@ -1,0 +1,30 @@
+//- dir: 'ltr' | 'rtl' = 'ltr'
+//- スライド方向を決める変数 'left to right' or 'right to -left'
+//- デフォルトは左から右
+
+//- pagination: boolean = false
+//- ページネーションを表示するかどうか
+//- デフォルトは非表示
+
+- var list = ['1','2','3','4','5'];
+
+mixin comic(dir='ltr', pagination=false)
+  div.p-comic(data-module="comic")
+    div.js-comic-container.swiper-container.p-comic__container(dir=dir)
+      ul.swiper-wrapper
+        each item in list
+          li.swiper-slide.p-comic__slide
+            img(src=`${assetsPath}/images/comic/${item}.png`)
+    div.p-comic__nav
+      if dir=='ltr'
+        button.js-comic-prev.p-comic__left-btn prev
+      else
+        button.js-comic-next.p-comic__left-btn next
+
+      if pagination==true
+        div.js-comic-pagination.p-comic__pagination
+
+      if dir=='ltr'
+        button.js-comic-next.p-comic__right-btn next
+      else
+        button.js-comic-prev.p-comic__right-btn prev

@@ -1,0 +1,47 @@
+.pa-lp {
+  .l-main {
+    &__inner {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__section-background {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    &:nth-child(1) {
+      background-image: url($assetsPath + '/images/background/1.png');
+    }
+    &:nth-child(3) {
+      background-image: url($assetsPath + '/images/background/2.png');
+    }
+    &:nth-child(5) {
+      background-image: url($assetsPath + '/images/background/3.png');
+    }
+    &:nth-child(7) {
+      background-image: url($assetsPath + '/images/background/4.png');
+    }
+  }
+
+  &__section-scroll {
+    min-height: 100vh;
+    background-color: transparent;
+
+    // &:nth-child(2) {
+    //   background-color: gray;
+    // }
+    // &:nth-child(4) {
+    //   background-color: cyan;
+    // }
+    // &:nth-child(6) {
+    //   background-color: pink;
+    // }
+    // &:nth-child(8) {
+    //   background-color: red;
+    // }
+  }
+}

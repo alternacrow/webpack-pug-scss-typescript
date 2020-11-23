@@ -1,0 +1,48 @@
+.p-comic {
+  & &__container {
+    border-top: 1px solid color(border);
+    border-bottom: 1px solid color(border);
+    @include mq(sp) {
+      border: none;
+    }
+  }
+
+  & &__slide {
+    &.swiper-slide {
+      height: auto;
+    }
+    display: flex;
+    align-items: center;
+    border: 1px solid color(border);
+    img {
+      width: 100%;
+    }
+  }
+
+  & &__nav {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & &__left-btn,
+  & &__right-btn {
+    border-radius: 8px;
+    background-color: color(gray);
+    padding: 8px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: color(white);
+
+    &.disabled {
+      background-color: color(white);
+    }
+  }
+
+  & &__pagination {
+    font-size: 16px;
+    color: color(note);
+    text-align: center;
+  }
+}

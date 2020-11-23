@@ -1,0 +1,26 @@
+@charset 'utf-8';
+
+$colors: (
+  // base
+  primary: #004643,
+  secondary: #faf4d3,
+  tertiary: #d1ac00,
+  // mono tone
+  black: #2a2a2a,
+  gray: #aaaaaa,
+  white: #ffffff,
+  blur: rgba(0, 0, 0, 0.5),
+  // unique
+  text: #0c1618,
+  note: #686868,
+  border: #cccccc,
+  shadow: rgba(0, 0, 0, 0.2),
+  link: #1e7dc0,
+  link-hover: #ff8800,
+  twitter: #55acee,
+  facebook: #3b5998
+);
+
+@function color($key) {
+  @return map-get($colors, $key);
+}

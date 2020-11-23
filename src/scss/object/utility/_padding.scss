@@ -1,0 +1,58 @@
+@charset 'utf-8';
+
+@for $i from 0 through 20 {
+  .pt-#{$i * 2} {
+    padding-top: $i * 2;
+  }
+  .pr-#{$i * 2} {
+    padding-right: $i * 2;
+  }
+  .pb-#{$i * 2} {
+    padding-bottom: $i * 2;
+  }
+  .pl-#{$i * 2} {
+    padding-left: $i * 2;
+  }
+
+  .sp\:pt-#{$i * 2} {
+    @include mq(sp) {
+      padding-top: $i * 2;
+    }
+  }
+  .sp\:pr-#{$i * 2} {
+    @include mq(sp) {
+      padding-right: $i * 2;
+    }
+  }
+  .sp\:pb-#{$i * 2} {
+    @include mq(sp) {
+      padding-bottom: $i * 2;
+    }
+  }
+  .sp\:pl-#{$i * 2} {
+    @include mq(sp) {
+      padding-left: $i * 2;
+    }
+  }
+
+  .tab\:pt-#{$i * 2} {
+    @include mq(tab) {
+      padding-top: $i * 2;
+    }
+  }
+  .tab\:pr-#{$i * 2} {
+    @include mq(tab) {
+      padding-right: $i * 2;
+    }
+  }
+  .tab\:pb-#{$i * 2} {
+    @include mq(tab) {
+      padding-bottom: $i * 2;
+    }
+  }
+  .tab\:pl-#{$i * 2} {
+    @include mq(tab) {
+      padding-left: $i * 2;
+    }
+  }
+}

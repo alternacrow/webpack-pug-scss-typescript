@@ -1,0 +1,28 @@
+@charset 'utf-8';
+
+//タイトル両サイドにスラッシュで強調するやつ
+@mixin both-sides-slash(
+  $pos: left,
+  $posNum: -32px,
+  $width: 16px,
+  $bgColor: #000,
+  $deg: 15deg
+) {
+  content: '';
+  position: absolute;
+  @if $pos == left {
+    left: $posNum;
+    top: 0;
+    bottom: 0;
+  } @else if $pos == right {
+    right: $posNum;
+    top: 0;
+    bottom: 0;
+  }
+  transform-origin: center center;
+  transform: rotate($deg);
+  margin: auto;
+  width: $width;
+  height: auto;
+  background-color: $bgColor;
+}

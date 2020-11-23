@@ -1,0 +1,37 @@
+extend ../layout/_layout.pug
+
+block vars
+  - var body_class = 'pa-top';
+  -
+    var linklist = [
+      {
+        name: 'Carousel',
+        href: `${publicPath}/carousel`,
+      },
+      {
+        name: 'LP',
+        href: `${publicPath}/lp`,
+      },
+    ]
+
+
+block content
+  main.l-main
+    div.l-main__inner
+      h1.c-heading1 Webpack Pug Scss TypeScript
+
+      section.pa-top-lead
+        h2.c-text.pa-top-lead__title このサイトは下記を使用して構成されています
+        ul.c-text.pa-top-lead__lib-list
+          li.c-text.pa-top-lead__lib-item Webpack
+          li.c-text.pa-top-lead__lib-item Pug
+          li.c-text.pa-top-lead__lib-item Scss
+          li.c-text.pa-top-lead__lib-item TypeScript
+
+      section.pa-top-nav
+        h2.c-text.pa-top-nav__title 倉庫
+        nav.pa-top-nav__nav
+          ul.pa-top-nav__list
+            each link in linklist
+              li.pa-top-nav__item
+                a(href=`${link.href}`) #{link.name}

@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.l-footer {
+  & &__inner {
+    margin: 0 auto;
+    max-width: $max-content-width;
+    height: 40px;
+    display: flex;
+    padding: 0 24px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & &__copyright {
+    font-size: 16px;
+    color: color(text);
+  }
+}

@@ -1,0 +1,16 @@
+- var list = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16'];
+
+mixin slideshow()
+  div.p-slideshow(data-module="slideshow")
+    div.swiper-container.p-slideshow__container.js-slideshow-container
+      ul.swiper-wrapper
+        each item in list
+          li.swiper-slide.p-slideshow__slide
+            img(src=`${assetsPath}/images/slideshow/${item}.png`)
+      button.p-slideshow__left-btn.js-slideshow-prev= "<"
+      button.p-slideshow__right-btn.js-slideshow-next= ">"
+    div.swiper-container.p-slideshow__thumbnails-container.js-slideshow-thumbnails
+      ul.swiper-wrapper
+        each item in list
+          li.swiper-slide.p-slideshow__thumbnail
+            img(src=`${assetsPath}/images/slideshow/${item}.png`)

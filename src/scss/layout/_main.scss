@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+.l-main {
+  & &__inner {
+    margin: 0 auto;
+    max-width: $max-content-width;
+    padding: 0 24px;
+    @include mq(sp) {
+      padding: 0 vw(6);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+extend ../layout/_layout.pug
+
+block vars
+  - var body_class = 'pa-carousel';
+
+block content
+  main.l-main
+    div.l-main__inner
+      h1.c-heading1 Webpack Pug Scss TypeScript
+
+      section.pa-carousel-section
+        h2.c-heading2.pa-carousel-section__title Comic
+        div.pa-carousel-section__lead
+          p.c-text swiper.jsを使用した漫画用カルーセルです
+        div.pa-carousel-section__content
+          include ../object/project/swiper/_comic.pug
+          +comic('rtl',true)
+
+      section.pa-carousel-section
+        h2.c-heading2.pa-carousel-section__title Slideshow
+        div.pa-carousel-section__lead
+          p.c-text swiper.jsを使用したスライドショーです
+        div.pa-carousel-section__content
+          include ../object/project/swiper/_slideshow.pug
+          +slideshow()
