@@ -1,0 +1,13 @@
+extend ../layout/_layout.pug
+
+block vars
+  - var body_class = 'pa-tetris';
+
+block content
+  main.l-main(data-module="tetris")
+    div.p-tetris
+      canvas.js-tetris
+      div.p-tetris__score.js-score
+      div.p-tetris__howto
+        p 移動: 矢印キー
+        p 左回転: z 右回転: x

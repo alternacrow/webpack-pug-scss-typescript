@@ -26,6 +26,7 @@ module.exports = (env, { mode }): Configuration => {
       index: path.join(PATHS.src, 'js/index.ts'),
       carousel: path.join(PATHS.src, 'js/carousel.ts'),
       lp: path.join(PATHS.src, 'js/lp.ts'),
+      tetris: path.join(PATHS.src, 'js/tetris.ts'),
     },
     output: {
       path: PATHS.dist,
@@ -123,6 +124,16 @@ module.exports = (env, { mode }): Configuration => {
         template: path.join(PATHS.src, 'views/page/lp.pug'),
         filename: 'lp.html',
         chunks: ['lp', 'lp.css'],
+        publicPath,
+        templateParameters: {
+          publicPath,
+          assetsPath,
+        },
+      }),
+      new HtmlWebpackPlugin({
+        template: path.join(PATHS.src, 'views/page/tetris.pug'),
+        filename: 'tetris.html',
+        chunks: ['tetris', 'tetris.css'],
         publicPath,
         templateParameters: {
           publicPath,
